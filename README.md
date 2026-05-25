@@ -30,11 +30,11 @@ Assemble it yourself, customize it for your workflow, and control your cameras a
 
 ## Device Photos
 
-![AnyPTZ front view](pics/FrontJPG.JPG)
-![AnyPTZ front alternate](pics/Front2JPG.JPG)
-![AnyPTZ front detail](pics/Front3JPG.JPG)
-![AnyPTZ back view](pics/BackJPG.JPG)
-![AnyPTZ back alternate](pics/Back2JPG.JPG)
+![AnyPTZ front view](pics/1.JPG)
+![AnyPTZ front alternate](pics/2.JPG)
+![AnyPTZ front detail](pics/3.JPG)
+![AnyPTZ back view](pics/4.JPG)
+![AnyPTZ back alternate](pics/5.JPG)
 
 ## Assembly Guide
 
