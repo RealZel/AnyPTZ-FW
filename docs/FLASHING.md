@@ -24,19 +24,46 @@ Located in `firmware/fullflash`:
 - `flash_full_windows.bat`
 - `flash_full_windows.ps1`
 
+### GUI uploader package
+
+Located in `firmware/uploader`:
+
+- `Biolumos FW Uploader.exe`
+- `firmware.bin`
+- `bootloader.bin`
+- `partitions.bin`
+- `littlefs.bin`
+- `tools/esptool.exe`
+
 ### OTA files (for updates through web UI)
 
 Located in `firmware/ota`:
 
-- `AnyPTZ_v0.1.4_OTA_bundle_20260525_123921.bin`
-- `AnyPTZ_v0.1.4_OTA_bundle_20260525_123921.ota`
-- `AnyPTZ_v0.1.4_OTA_web_only_20260525_123921.bin`
+- `AnyPTZ_v0.1.6_OTA_bundle_20260525_152617.bin`
+- `AnyPTZ_v0.1.6_OTA_bundle_20260525_152617.ota`
+- `AnyPTZ_v0.1.6_OTA_web_only_20260525_152617.bin`
 
 ### Integrity checks
 
 - `firmware/SHA256SUMS.txt`
 
 ## 2. First flash for a new MCU (recommended)
+
+### Windows GUI uploader
+
+1. Connect ESP32 by USB.
+2. Open `firmware/uploader`.
+3. Run `Biolumos FW Uploader.exe`.
+4. Select your COM port.
+5. Leave the default `firmware.bin` selected.
+6. Click `Flash`.
+
+The adapted uploader flashes:
+
+- `0x1000` -> `bootloader.bin`
+- `0x8000` -> `partitions.bin`
+- `0x10000` -> `firmware.bin`
+- `0x310000` -> `littlefs.bin`
 
 ### Windows quick method
 
@@ -110,8 +137,8 @@ If your AnyPTZ is already running and web UI is available:
 2. Go to OTA upload section.
 3. Upload one of these files from `firmware/ota`:
 
-- `AnyPTZ_v0.1.4_OTA_bundle_20260525_123921.bin` or `.ota` for full OTA (firmware + web files)
-- `AnyPTZ_v0.1.4_OTA_web_only_20260525_123921.bin` for web UI filesystem only
+- `AnyPTZ_v0.1.6_OTA_bundle_20260525_152617.bin` or `.ota` for full OTA (firmware + web files)
+- `AnyPTZ_v0.1.6_OTA_web_only_20260525_152617.bin` for web UI filesystem only
 
 ## 5. First boot after flashing
 

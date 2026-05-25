@@ -94,6 +94,7 @@ This repository contains release-only files:
 
 - Ready-to-use OTA files in `firmware/ota`
 - Full first-flash binaries for a new MCU in `firmware/fullflash`
+- GUI uploader package in `firmware/uploader`
 - Integrity hashes in `firmware/SHA256SUMS.txt`
 
 ## Flashing and First Start
