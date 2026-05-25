@@ -40,7 +40,7 @@ Assemble it yourself, customize it for your workflow, and control your cameras a
 
 ### Required Components
 
-- ESP32 Lolin Lite
+- ESP32 Lolin32 Lite
 - 1.3" OLED I2C display
 - 5D joystick module with 2 push buttons
 - TP4056 charging module with protection
@@ -82,8 +82,11 @@ Connect OUT+ and OUT- from the TP4056 through a mechanical power switch.
 
 After the switch:
 
-- Positive wire -> 3V pin on ESP32
+- Positive wire -> VIN/5V/BAT input on ESP32 board (board-dependent)
 - Negative wire -> GND pin on ESP32
+
+Important: do not feed raw Li-ion voltage (up to 4.2V) directly into a 3V3 pin.
+If your board exposes only a 3V3 power input, use an external 3.3V regulator.
 
 ## Firmware Package (No Sources)
 

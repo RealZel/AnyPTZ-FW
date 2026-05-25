@@ -40,6 +40,21 @@ Located in `firmware/ota`:
 
 ### Windows quick method
 
+Prerequisites:
+
+1. Install Python 3.
+2. Install esptool:
+
+```powershell
+python -m pip install --upgrade esptool
+```
+
+3. Verify esptool is available:
+
+```powershell
+esptool.py version
+```
+
 1. Connect ESP32 by USB.
 2. Open terminal in `firmware/fullflash`.
 3. Run:
@@ -130,7 +145,7 @@ If your AnyPTZ is already running and web UI is available:
 To verify files before flashing, compare hashes:
 
 ```powershell
-Get-FileHash .\firmware\fullflash\firmware.bin -Algorithm SHA256
+Get-ChildItem .\firmware -Recurse -File | Where-Object { $_.Extension -in '.bin', '.ota' } | Get-FileHash -Algorithm SHA256
 ```
 
 Compare with values in `firmware/SHA256SUMS.txt`.
